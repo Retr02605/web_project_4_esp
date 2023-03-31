@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Alrededor de los Estados Unidos</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://code.s3.yandex.net/web-code/favicon.ico"
+    />
+  </head>
+  
+  <body class="root"> 
+    <header class="header">
+      <img
+        class="header__logo-header"
+        src="./images/logo-header.png"
+        alt="Logo Around, alrededor de los estados unidos"
+      />
+      <div class="divider-section"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <img
+          class="profile__image"
+          src="./images/profile-image.jpg"
+          alt="Foto de perfil"
+        />
+        <div class="profile__info">
+          <button class="profile__info-edit-btn" id="btn_edit">
+            <img
+              class="profile__info-icon-edit"
+              src="./images/Edit Button.png"
+              alt="Botón editar perfil"
+            />
+          </button>
+          <h1 class="profile__info-name" id="names">Jacques Cousteau</h1>
+          <h2 class="profile__info-about" id="profesion">Explorador</h2>
+        </div>
+        <button class="profile__add-btn">
+          <img
+            class="profile__add-btn-image"
+            src="./images/Add Button.png"
+            alt="Botón para agregar imagenes"
+          />
+        </button>
+      </section>
+      
+      <section class="elements">
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Valle de Yosemite</h2>
+            <button class="card-like" id="heart-like"></button>
+          </div>
+        </div>
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin2.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Lago Louise</h2>
+            <button class="card-like" id="heart-like"></button>
+          </div>
+        </div>
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin3.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Montañas Calvas</h2>
+            <button class="card-like" id="heart-like"></button>
+          </div>
+        </div>
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin4.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Latemar</h2>
+            <button class="card-like" id="heart-like"></button>
+          </div>
+        </div>
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin5.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Vanoise Nationa...</h2>
+            <button class="card-like" id="heart-like"> </button>
+          </div>
+        </div>
+        
+        <div class="element-card">
+          <img class="card-image" src="../web_project_4_esp/images/kirill-pershin6.png" alt="Error de Carga de imagen">
+          <div class="card-content">
+            <h2 class="card-title">Lago di Braies</h2>
+            <button class="card-like" id="heart-like"></button>
+          </div>
+        
+        </div>
+      </section>
+        <section class="popup popup_close " id="edit-profile-form">
+          <div class="popup__overlay"></div>
+          <div class="popup__container">
+            <button class="popup__container-close-popup">
+              <img
+                src="./images/close-icon.png"
+                alt="botón para cerrar cuadro emergente"
+                class="popup__container-close-icon"
+                id="close-icon"
+              />
+            </button>
+            <h3 class="popup__container-text">Editar perfil</h3>
+
+            <form class="popup__container-form">
+              <input
+                type="text"
+                class="popup__container-input"
+                placeholder="Nombre"
+                id="name"
+                minlength="2"
+                maxlength="40"
+              />
+
+              <input
+                type="text"
+                placeholder="Profesión"
+                class="popup__container-input"
+                id="about-me"
+                minlength="2"
+                maxlength="200"
+                
+              />
+              <button class="popup__container-save-btn" id='boton-save' type="button">
+                Guardar
+              </button>
+            </form>
+          </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <p class="footer-author">&copy; 2023 Alrededor de los EEUU</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

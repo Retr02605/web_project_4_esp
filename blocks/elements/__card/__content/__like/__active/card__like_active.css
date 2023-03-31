@@ -1,0 +1,21 @@
+.card_like-active {
+    /*position: absolute;*/
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 21px;
+    height: 19px;
+    position: absolute;
+    right: 15px;
+    left: 240px;
+    top: 30px;
+    transition: 0.3s ease all;
+    object-fit: cover;
+    background-image: url(/dev/web_project_4_esp/images/like-active.png);
+  }
+  
+  .card_like-active:hover {
+    opacity: 1;
+  }
+
+  
