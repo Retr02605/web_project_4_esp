@@ -2,15 +2,14 @@
 
 ### Descripción general
 
+El proyecto trata acerca de estudos unidos y sus diferentes ciudades y estados que tiene, fue desarrollado con las siguientes tecnologias:
+
 * Figma
 * Imágenes
+* HTML
+* CSS
+* JavaScript
 
-**Figma**
+El proyecto funciona mediante los botones con los cuales se puede editar tanto el nombre como la profesion y se puede indicar que imagenes son las que les gusta,  a continuacion sepuede encontrar un enlace al proyecto.
 
-* [Enlace al proyecto en Figma](https://www.figma.com/file/LDMgqWesKpQkIwhOfEBuTS/WEB%2C-Sprint-5%3A-Around-The-U.S.-%7C-desktop-%2B-mobile?node-id=0%3A1)
-
-**Imágenes**
-
-A la hora de trabajar, debes optar por exportar las imágenes directamente desde Figma; te recomendamos hacerlo para practicar más. No olvides optimizarlas [aquí](https://tinypng.com/), para que tu proyecto cargue más rápido. 
-
-¡Esperamos que te diviertas con JavaScript!
+https://github.com/Retr02605/web_project_4_esp
