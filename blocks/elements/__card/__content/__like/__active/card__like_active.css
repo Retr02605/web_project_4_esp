@@ -11,7 +11,7 @@
     top: 30px;
     transition: 0.3s ease all;
     object-fit: cover;
-    background-image: url(/dev/web_project_4_esp/images/like-active.png);
+    background-image: url(../../../../../../images/like-active.png);
   }
   
   .card_like-active:hover {

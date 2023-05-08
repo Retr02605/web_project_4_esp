@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Alrededor de los Estados Unidos</title>
     <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="stylesheet" href="./vendor/normalize.css"/>
     <link
       rel="icon"
       type="image/x-icon"
@@ -38,7 +39,7 @@
           <h1 class="profile__info-name" id="names">Jacques Cousteau</h1>
           <h2 class="profile__info-about" id="profesion">Explorador</h2>
         </div>
-        <button class="profile__add-btn">
+        <button class="profile__add-btn" id="btn_create">
           <img
             class="profile__add-btn-image"
             src="./images/Add Button.png"
@@ -47,95 +48,106 @@
         </button>
       </section>
       
-      <section class="elements">
+      <section class="elements" id = "element-id">
         
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin.png" alt="Imagen de un bosque con un rio">
+        <!--<div class="element-card">
+          <button class="card-delete" id="delete"></button>
+          <img class="card-image" src="">
           <div class="card-content">
-            <h2 class="card-title">Valle de Yosemite</h2>
+            <h2 class="card-title"></h2>
             <button class="card-like" id="heart-like"></button>
           </div>
-        </div>
+        </div>-->
         
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin2.png" alt="Imagen de un lago con montañas">
-          <div class="card-content">
-            <h2 class="card-title">Lago Louise</h2>
-            <button class="card-like" id="heart-like-two"></button>
-          </div>
-        </div>
-        
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin3.png" alt="Imagen de un atardecer con montañas">
-          <div class="card-content">
-            <h2 class="card-title">Montañas Calvas</h2>
-            <button class="card-like" id="heart-like-three"></button>
-          </div>
-        </div>
-        
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin4.png" alt="Imagen del cielo estrellado">
-          <div class="card-content">
-            <h2 class="card-title">Latemar</h2>
-            <button class="card-like" id="heart-like-four"></button>
-          </div>
-        </div>
-        
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin5.png" alt="Imagen de un lago con una montaña nevada">
-          <div class="card-content">
-            <h2 class="card-title">Vanoise Nationa...</h2>
-            <button class="card-like" id="heart-like-five"> </button>
-          </div>
-        </div>
-        
-        <div class="element-card">
-          <img class="card-image" src="./images/kirill-pershin6.png" alt="Imagen de un lago con canoas">
-          <div class="card-content">
-            <h2 class="card-title">Lago di Braies</h2>
-            <button class="card-like" id="heart-like-six"></button>
-          </div>
-        
+      </section>
+      <section class="popup popup_close " id="edit-profile-form">
+        <div class="popup__overlay"></div>
+        <div class="popup__container">
+          <button class="popup__container-close-popup">
+            <img
+              src="./images/close-icon.png"
+              alt="botón para cerrar cuadro emergente"
+              class="popup__container-close-icon"
+              id="close-icon"
+            />
+          </button>
+          <h3 class="popup__container-text">Editar perfil</h3>
+
+          <form class="popup__container-form">
+            <input
+              type="text"
+              class="popup__container-input"
+              placeholder="Nombre"
+              id="name"
+              minlength="2"
+              maxlength="40"
+            />
+
+            <input
+              type="text"
+              placeholder="Profesión"
+              class="popup__container-input"
+              id="about-me"
+              minlength="2"
+              maxlength="200"
+                
+            />
+            <button class="popup__container-save-btn" id='boton-save' type="button">
+              Guardar
+            </button>
+          </form>
         </div>
       </section>
-        <section class="popup popup_close " id="edit-profile-form">
-          <div class="popup__overlay"></div>
-          <div class="popup__container">
-            <button class="popup__container-close-popup">
-              <img
-                src="./images/close-icon.png"
-                alt="botón para cerrar cuadro emergente"
-                class="popup__container-close-icon"
-                id="close-icon"
-              />
-            </button>
-            <h3 class="popup__container-text">Editar perfil</h3>
 
-            <form class="popup__container-form">
-              <input
-                type="text"
-                class="popup__container-input"
-                placeholder="Nombre"
-                id="name"
-                minlength="2"
-                maxlength="40"
-              />
+      <section class="popup popup_close" id="popup_insert-card">
+        <div class="popup__overlay"></div>
+        <div class="popup__container">
+          <button class="popup__container-close-popup">
+            <img
+              src="./images/close-icon.png"
+              alt="botón para cerrar cuadro emergente"
+              class="popup__container-close-icon"
+              id="close-icon-btn"
+            />
+          </button>
+          <h3 class="popup__container-text">Nuevo Lugar</h3>
 
-              <input
-                type="text"
-                placeholder="Profesión"
-                class="popup__container-input"
-                id="about-me"
-                minlength="2"
-                maxlength="200"
+          <form class="popup__container-form">
+            <input
+              type="text"
+              class="popup__container-input"
+              placeholder="Titulo"
+              id="title"
+              minlength="2"
+              maxlength="40"
+            />
+
+            <input
+              type="text"
+              placeholder="Enlace a la imagen"
+              class="popup__container-input"
+              id="image"
+              minlength="2"
+              maxlength="200"
                 
-              />
-              <button class="popup__container-save-btn" id='boton-save' type="button">
-                Guardar
-              </button>
-            </form>
-          </div>
-        </section>
+            />
+            <button class="popup__container-save-btn" id='btn_create' type="button" onclick="agregarCard()">
+              Crear
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="modal modal_opened">
+        <div class="modal__container">
+          <img
+            src="./images/close-icon.png"
+            alt="icon para cerra la imágen"
+            class="modal__container-close"
+          />
+          <img class="modal__image-card" src=" " alt=" " id="modal" />
+          <h3 class="modal__title-text"></h3>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <p class="footer-author">&copy; 2023 Alrededor de los EEUU</p>
