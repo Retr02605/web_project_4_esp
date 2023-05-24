@@ -284,39 +284,3 @@ addEventListener("DOMContentLoaded", () => {
 
 let poup = document.getElementById("popup_insert-image");
 
-function crearPopup() {
-  console.log("entro")
-//   initialCards.map((p) => {
-//     let divo = document.createElement("div");
-//     divo.classList.add("popup__overlay");
-//     let divp = document.createElement("div");
-//     divp.classList.add("popup__images");
-//     let cerrar = document.createElement("button");
-//     cerrar.classList.add("popup__container-close-popup");
-//     let imag = document.createElement("img");
-//     imag.classList.add("popup__container-close-icon");
-//     imag.id = "close-ico-btn";
-//     imag.src = "./images/close-icon.png" 
-//     let imagen = document.createElement("img");
-//     imagen.classList.add("popup__image-card");
-//     imagen.id = "modal";
-//     imagen.src = p.link;
-//     let titulo = document.createElement("h2");
-//     titulo.classList.add("popup__title-text");
-//     titulo.innerText = p.name;
-
-//     divp.appendChild(cerrar);
-//     cerrar.appendChild(imag);
-//     divp.appendChild(imagen);
-//     divp.appendChild(titulo);
-//     let popupImage = document.getElementById("popup_insert-image");
-//     poup.append(divp);
-// console.log(poup)
-  
-//   });
-}
-
-function abrirPopup() {
-
-}
-console.log(crearPopup)
