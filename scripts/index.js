@@ -103,8 +103,8 @@ function crearCards(segundo = false) {
 
     deleteb.id = initialCards[0].id + "delete";
     deleteb.addEventListener("click", function (b) {
-      
-      if (b.target.id.length > 7) {
+      let con = b.target.id.length;
+      if (con > 7) {
         let borrar = document.getElementById(parseInt(b.target.id.slice(0, 2)));
         let borr = parseInt(b.target.id.slice(0, 2));
         
@@ -119,6 +119,21 @@ function crearCards(segundo = false) {
     let img = document.createElement("img");
     img.classList.add("card-image");
     img.src = initialCards[0].link;
+
+    img.addEventListener("click",function(e){
+      let popUpAbierto = document.getElementById("popup_insert-image")
+      popUpAbierto.classList.remove("popup_close");
+
+      document.getElementById("imagenPop").src= initialCards[0].link
+      document.querySelector(".popup__title-text").textContent = initialCards[0].name
+
+      document.getElementById("close-icon-img-btn").addEventListener("click",function(e){
+        popUpAbierto.classList.add("popup_close");
+      })
+
+
+    });
+    
     let divc = document.createElement("div");
     divc.classList.add("card-content");
     let h2 = document.createElement("h2");
@@ -139,6 +154,19 @@ function crearCards(segundo = false) {
       } else {
         like.classList.add("card_like-active");
         like.classList.remove("card-like");
+      }
+      
+      
+      
+      
+      img.addEventListener("click", cerra);
+      let popupImag = document.getElementById("popup_insert-image");
+      function cerra() {
+        if (popupImag.classList.contains("popup_close")) {
+          popupImag.classList.remove("popup_close");
+        } else {
+          popupImag.classList.add("popup_close");
+        }
       }
     });
 
@@ -166,6 +194,21 @@ function crearCards(segundo = false) {
       let img = document.createElement("img");
       img.classList.add("card-image");
       img.src = c.link;
+
+      img.addEventListener("click",function(e){
+        let popUpAbierto = document.getElementById("popup_insert-image")
+        popUpAbierto.classList.remove("popup_close");
+
+        document.getElementById("imagenPop").src= c.link
+        document.querySelector(".popup__title-text").textContent = c.name
+
+        document.getElementById("close-icon-img-btn").addEventListener("click",function(e){
+          popUpAbierto.classList.add("popup_close");
+        })
+
+  
+      });
+
       let divc = document.createElement("div");
       divc.classList.add("card-content");
       let h2 = document.createElement("h2");
@@ -184,6 +227,17 @@ function crearCards(segundo = false) {
           like.classList.add("card_like-active");
           like.classList.remove("card-like");
         }
+            
+        
+        
+            img.addEventListener("click", cerra);
+            function cerra() {
+              if (popupImag.classList.contains("popup_close")) {
+                popupImag.classList.remove("popup_close");
+              } else {
+                popupImag.classList.add("popup_close");
+              }
+      }
       });
 
       div.appendChild(deleteb);
@@ -193,6 +247,7 @@ function crearCards(segundo = false) {
       divc.appendChild(likeb);
 
       card.prepend(div);
+      
     });
   }
 }
@@ -220,50 +275,48 @@ function agregarCard() {
 
 addEventListener("DOMContentLoaded", () => {
   crearCards();
+  crearPopup();
 });
 
-function abrirImage() {}
 
-let equ = document.getElementById("close-ico-btn");
-let popupImage = document.getElementById("popup_insert-image");
 
-/*equ.addEventListener("click", openP);
 
-function openP() {
-  if (popupImage.classList.contains("popup_close")) {
-    popupImage.classList.remove("popup_close");
-  } else {
-    popupImage.classList.add("popup_close");
-  }
-}*/
 
 let poup = document.getElementById("popup_insert-image");
 
 function crearPopup() {
-  initialCards.map((p) => {
-    let divo = document.createElement("div");
-    divo.classList.add("popup__overlay");
-    let divp = document.createElement("div");
-    divp.classList.add("popup__images");
-    let cerrar = document.createElement("button");
-    cerrar.classList.add("popup__container-close-popup");
-    let imag = document.createElement("img");
-    imag.classList.add("popup__container-close-icon");
-    imag.id = "close-ico-btn";
-    imag.src = "./images/close-icon.png" 
-    let imagen = document.createElement("img");
-    imagen.classList.add("popup__image-card");
-    imagen.id = "modal";
-    imagen.src = p.link;
-    let titulo = document.createElement("h2");
-    titulo.classList.add("popup__title-text");
-    titulo.innerText = p.name;
+  console.log("entro")
+//   initialCards.map((p) => {
+//     let divo = document.createElement("div");
+//     divo.classList.add("popup__overlay");
+//     let divp = document.createElement("div");
+//     divp.classList.add("popup__images");
+//     let cerrar = document.createElement("button");
+//     cerrar.classList.add("popup__container-close-popup");
+//     let imag = document.createElement("img");
+//     imag.classList.add("popup__container-close-icon");
+//     imag.id = "close-ico-btn";
+//     imag.src = "./images/close-icon.png" 
+//     let imagen = document.createElement("img");
+//     imagen.classList.add("popup__image-card");
+//     imagen.id = "modal";
+//     imagen.src = p.link;
+//     let titulo = document.createElement("h2");
+//     titulo.classList.add("popup__title-text");
+//     titulo.innerText = p.name;
 
-    divp.appendChild(cerrar);
-    cerrar.appendChild(imag);
-    divp.appendChild(imagen);
-    divp.appendChild(titulo);
-
-    poup.append(divp);
-  });
+//     divp.appendChild(cerrar);
+//     cerrar.appendChild(imag);
+//     divp.appendChild(imagen);
+//     divp.appendChild(titulo);
+//     let popupImage = document.getElementById("popup_insert-image");
+//     poup.append(divp);
+// console.log(poup)
+  
+//   });
 }
+
+function abrirPopup() {
+
+}
+console.log(crearPopup)
